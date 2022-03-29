@@ -1,0 +1,549 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #0890ff;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1.2rem 2.4rem rgb(0 0 0 / 15%);
+  border-radius: 4rem 4rem 3rem 3rem;
+  background-color: #fff;
+  width: 600px;
+  position: relative;
+  cursor: pointer all;
+  top: 10vh;
+  left: 35%;
+  height: 750px;
+}
+.flow-holder {
+  position: relative;
+  width: 100%;
+  height: 350px;
+
+  top: 10vh;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.up-box {
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: row;
+  color: rgb(232, 235, 241);
+}
+.heads {
+  font-weight: normal;
+  position: absolute;
+  left: 5%;
+  bottom: 22%;
+  margin-left: 0px;
+}
+.blue-hill {
+  width: 100%;
+  height: 250px;
+  border-radius: 3rem 3rem 0rem 0rem;
+}
+.lcon {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  transform: translate(-5%, -50%);
+  z-index: 3;
+}
+.line {
+  width: 30px;
+  height: 3px;
+  background: rgb(232, 235, 241);
+  margin: 3px 3px 4px;
+}
+.lin {
+  width: 15px;
+  height: 3px;
+  background: rgb(232, 235, 241);
+  margin: 3px 3px 4px;
+}
+.line-under {
+  background-image: linear-gradient(
+    to right,
+    rgb(184, 108, 235),
+    rgb(111, 89, 235),
+    rgb(89, 152, 235)
+  );
+  width: 60%;
+  height: 7px;
+  position: absolute;
+  bottom: 0%;
+  z-index: 3;
+}
+.full-date {
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  opacity: 60%;
+}
+.dark-trans {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  right: 0%;
+  background: rgb(0, 0, 0);
+  opacity: 20%;
+  width: 40%;
+  height: 100%;
+  border-radius: 0 3rem 0 0;
+}
+.trans-one {
+  position: absolute;
+  bottom: 20%;
+  right: 23%;
+}
+.trans-one h1 {
+  font-weight: normal;
+  font-size: 27px;
+  position: absolute;
+  right: 0%;
+  bottom: 30%;
+}
+.trans-one p {
+  font-size: 15px;
+  opacity: 60%;
+}
+.trans-two {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+}
+.trans-two h1 {
+  font-weight: normal;
+  font-size: 27px;
+  position: absolute;
+  right: 0%;
+  bottom: 30%;
+}
+.trans-two p {
+  font-size: 15px;
+  opacity: 60%;
+}
+.trans-three {
+  position: absolute;
+  display: flex;
+  right: 5%;
+  bottom: 2%;
+}
+.trans-three p {
+  font-size: 15px;
+  opacity: 60%;
+  padding-left: 10px;
+}
+.circle-progress {
+  position: absolute;
+  margin-top: 10px;
+}
+.popup {
+  position: absolute;
+  background: #fff;
+  width: 32vh;
+  height: 50%;
+  top: 20%;
+  right: 41%;
+  padding: 20px;
+  border-radius: 2rem;
+}
+.forms {
+  display: flex;
+  flex-direction: column;
+}
+.forms p {
+  font-size: 24px;
+  opacity: 50%;
+}
+.textarea-control {
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgb(219, 196, 196);
+}
+.form-control {
+  color: #000;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid rgb(219, 196, 196);
+  margin-bottom: 10px;
+  outline: none;
+}
+.form-control:focus {
+  border: none;
+  border-bottom: 1px solid #2fa4ff;
+}
+.textarea-control:focus {
+  border: none;
+  border-bottom: 1px solid #2fa4ff;
+}
+.footers {
+  display: flex;
+  position: absolute;
+  z-index: 3;
+  bottom: 5%;
+  left: 6%;
+  opacity: 50%;
+  text-transform: uppercase;
+}
+.footers h2 {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+.footers p {
+  position: absolute;
+  left: 105%;
+  bottom: -9%;
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.list-head {
+  opacity: 50%;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  position: absolute;
+  left: 5%;
+  top: 35%;
+  letter-spacing: 1.5px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  right: 0%;
+  width: 100%;
+  padding: 0px 20px;
+  position: absolute;
+  top: 0%;
+}
+
+.lister {
+  position: relative;
+}
+.lister:hover {
+  border-radius: 3px;
+}
+.lister :hover .list-title {
+  opacity: 0.5;
+}
+.lister :hover .list-description {
+  opacity: 0.5;
+}
+.spanner {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  top: -10%;
+}
+.check {
+  font-size: 30px;
+  color: #01ff2c;
+  position: absolute;
+  right: 5%;
+  bottom: 30%;
+}
+.lister:hover .delete-icon,
+.lister:hover .edit-icon {
+  visibility: visible;
+}
+.list-title {
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+
+.list-description {
+  margin-top: 5px;
+  font-size: 16px;
+  opacity: 50%;
+  margin-left: 15px;
+}
+.list-time {
+  font-size: 16px;
+  opacity: 50%;
+  float: right;
+}
+.delete-icon {
+  position: absolute;
+  top: 22px;
+  right: 60px;
+  color: #01b6fd;
+  max-width: 40px;
+  visibility: hidden;
+  z-index: 99;
+  font-size: 20px;
+}
+.edit-icon {
+  position: absolute;
+  top: 22px;
+  left: 425px;
+  color: #01b6fd;
+  font-size: 20px;
+  max-width: 60px;
+  visibility: hidden;
+  z-index: 99;
+}
+.btn-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 27px;
+  bottom: 27px;
+  background-image: radial-gradient(circle, #01b6fd, rgb(19, 200, 212));
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0rem 0.5rem 2rem rgba(143, 145, 146, 0.4);
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+.cross {
+  font-size: 50px;
+}
+.butn-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background-image: radial-gradient(circle, #01b6fd, rgb(19, 200, 212));
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0.5rem 1rem 3rem rgba(6, 201, 250, 0.5);
+  cursor: pointer;
+  outline: none;
+}
+.crost {
+  font-size: 30px;
+}
+.btn-add:hover {
+  background-image: radial-gradient(circle, #01cbfd, rgb(19, 200, 212));
+}
+.butn-add:hover {
+  background-image: radial-gradient(circle, #01cbfd, rgb(19, 200, 212));
+}
+
+input[type="time"] {
+  border: none;
+  color: #2a2c2d;
+  font-size: 14px;
+  font-family: helvetica;
+  width: 200px;
+  outline: none;
+}
+
+/* Wrapper around the hour, minute, second, and am/pm fields as well as 
+the up and down buttons and the 'X' button */
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+/* The space between the fields - between hour and minute, the minute and 
+second, second and am/pm */
+input[type="time"]::-webkit-datetime-edit-text {
+  padding: 19px 4px;
+}
+
+/* The naming convention for the hour, minute, second, and am/pm field is
+`-webkit-datetime-edit-{field}-field` */
+
+/* Hour */
+input[type="time"]::-webkit-datetime-edit-hour-field {
+  background-color: #c6e4f3;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* Minute */
+input[type="time"]::-webkit-datetime-edit-minute-field {
+  background-color: #84cef3;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+  background-color: #55a5d3;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+}
+
+/* 'X' button for resetting/clearing time */
+input[type="time"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Up/Down arrows for incrementing/decrementing the value */
+input[type="time"]::-webkit-inner-spin-button {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(128, 128, 128);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(48, 170, 240);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #10b5f7;
+}
+.add-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 15px;
+  width: 50%;
+  margin: 10% auto;
+  background-image: radial-gradient(circle, #01b6fd, rgb(19, 200, 212));
+}
+.add-btn:hover {
+  background-image: radial-gradient(circle, #01cbfd, rgb(19, 200, 212));
+  box-shadow: 0.5rem 1rem 3rem rgba(211, 230, 235, 0.4);
+}
+/* .update-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 15px;
+  width: 50%;
+  margin: 10% auto;
+  background-image: radial-gradient(circle, #01b6fd, rgb(19, 200, 212));
+}
+.update-btn:hover {
+  background-image: radial-gradient(circle, #01cbfd, rgb(19, 200, 212));
+  box-shadow: 0.5rem 1rem 3rem rgba(211, 230, 235, 0.4);
+} */
+@media screen and (max-width: 1000px) {
+  * {
+    margin: 0;
+  }
+  .todo {
+    width: auto;
+    top: 0;
+    border-radius: 0;
+    left: 0;
+    height: 100vh;
+  }
+  .up-box {
+    border-radius: 0;
+  }
+  .blue-hill {
+    border-radius: 0;
+    height: 200px;
+  }
+  .dark-trans {
+    border-radius: 0;
+  }
+  .heads {
+    font-size: 28px;
+    bottom: 23%;
+  }
+  .trans-two,
+  .trans-one {
+    bottom: 30%;
+  }
+  .trans-one p,
+  .trans-two p,
+  .trans-three p {
+    font-size: 12px;
+    margin-top: 10%;
+  }
+  .trans-one h1,
+  .trans-two h1 {
+    bottom: 80%;
+  }
+  .list-head {
+    font-size: 13px;
+  }
+  .full-date {
+    font-size: 12px;
+    bottom: 5%;
+  }
+  .btn-add {
+    width: 60px;
+    height: 60px;
+    right: 20%;
+    bottom: 2%;
+    box-shadow: 0.2rem 0.2rem 1rem rgb(6 201 250/0.7);
+  }
+  .popup {
+    width: 40vh;
+    right: 15%;
+  }
+  .form-control {
+    margin-top: 10%;
+    font-size: 15px;
+  }
+  .textarea-control {
+    font-size: 14px;
+  }
+  .footers h2 {
+    font-size: 13px;
+  }
+  .footers p {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+  }
+  hr {
+    margin-bottom: 20px;
+  }
+  .list-description {
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-size: 13px;
+  }
+  .list-title {
+    font-size: 15px;
+    margin: 0;
+  }
+  .list-time {
+    font-size: 13px;
+  }
+  .lister {
+  }
+}
