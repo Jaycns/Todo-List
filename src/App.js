@@ -5,7 +5,7 @@ import "./App.css";
 import image from "./images/blue_hill.jpg";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Modal } from "@mui/material";
-import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
+import { CircularProgress } from "@chakra-ui/react";
 
 const initialTodoState = {
   Id: null,
@@ -90,7 +90,7 @@ export default function App() {
     (
       <div className="todo">
         <div className="up-box">
-          <img src={image} className="blue-hill" alt="An image is here" />
+          <img src={image} className="blue-hill" alt="An age is here" />
           <div className="lcon">
             <div className="line"></div>
             <div className="lin"></div>

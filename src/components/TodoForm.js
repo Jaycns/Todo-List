@@ -14,7 +14,6 @@ function TodoForm({ handleClick, handleChange, todo, isEdit, onEdit }) {
           value={todo.title}
           placeholder="Title"
           className="form-control"
-          required="required"
           aria-required="true"
         />
         <textarea
