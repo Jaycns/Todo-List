@@ -119,7 +119,7 @@ export default function App() {
               size="22px"
               thickness="8px"
             />
-            <p>{perc}% done</p>
+            <p>{lenth > 0 ? perc : 0}% done</p>
           </div>
         </div>
 
