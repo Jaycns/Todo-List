@@ -29,7 +29,6 @@ function TodoList({
   }
 
   function onhandleEdit(key) {
-  
     setOpen(true);
     setIsEdit(true);
     setTodo({
