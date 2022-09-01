@@ -535,7 +535,7 @@ input[type="time"]::-webkit-inner-spin-button {
   hr {
     margin-bottom: 20px;
   }
-  .list{
+  .list {
     overflow: hidden;
     top: 10%;
   }
@@ -550,7 +550,5 @@ input[type="time"]::-webkit-inner-spin-button {
   }
   .list-time {
     font-size: 13px;
-  }
-  .lister {
   }
 }
