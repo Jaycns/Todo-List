@@ -535,6 +535,10 @@ input[type="time"]::-webkit-inner-spin-button {
   hr {
     margin-bottom: 20px;
   }
+  .list{
+    overflow: hidden;
+    top: 10%;
+  }
   .list-description {
     margin-bottom: 15px;
     margin-left: 0px;
