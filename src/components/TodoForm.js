@@ -32,6 +32,7 @@ function TodoForm({ handleClick, handleChange, todo, isEdit, onEdit }) {
           onChange={handleChange}
           required="required"
         />
+
         <button
           className="add-btn"
           type="button"

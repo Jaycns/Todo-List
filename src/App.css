@@ -9,24 +9,28 @@ body {
 
 .todo {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   box-shadow: 0 1.2rem 2.4rem rgb(0 0 0 / 15%);
   border-radius: 4rem 4rem 3rem 3rem;
   background-color: #fff;
   width: 600px;
   position: relative;
   cursor: pointer all;
-  top: 10vh;
-  left: 35%;
+
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  margin: auto;
   height: 750px;
+}
+.up-holder {
+  position: relative;
+  height: 38%;
 }
 .flow-holder {
   position: relative;
   width: 100%;
   height: 350px;
-
-  top: 10vh;
   margin: 0;
   padding: 0;
   overflow: auto;
@@ -151,12 +155,21 @@ body {
 .popup {
   position: absolute;
   background: #fff;
-  width: 32vh;
-  height: 50%;
-  top: 20%;
-  right: 41%;
+  width: 20rem;
+  height: 50vh;
+  top: -10%;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  margin: auto;
   padding: 20px;
   border-radius: 2rem;
+}
+@media (max-width: 1300px) {
+  .popup {
+    top: -10%;
+    height: 70vh;
+  }
 }
 .forms {
   display: flex;
@@ -223,32 +236,22 @@ body {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 700;
-  position: absolute;
-  left: 5%;
-  top: 35%;
   letter-spacing: 1.5px;
+  margin: 0px 20px;
 }
 .list {
   display: flex;
   flex-direction: column;
-  right: 0%;
   width: 100%;
   padding: 0px 20px;
-  position: absolute;
   top: 0%;
 }
 
 .lister {
   position: relative;
+  cursor: pointer;
 }
-.lister:hover {
-  border-radius: 3px;
-}
-.lister :hover .list-title {
-  opacity: 0.5;
-}
-.lister :hover .list-description {
-  opacity: 0.5;
+.lister :hover {
 }
 .spanner {
   z-index: 3;
@@ -258,11 +261,12 @@ body {
   top: -10%;
 }
 .check {
-  font-size: 30px;
-  color: #01ff2c;
-  position: absolute;
-  right: 5%;
-  bottom: 30%;
+  font-size: 26px;
+  color: #0184ff;
+  position: relative;
+  margin: auto;
+  top: 0;
+  bottom: 0;
 }
 .lister:hover .delete-icon,
 .lister:hover .edit-icon {
@@ -271,14 +275,14 @@ body {
 .list-title {
   font-size: 18px;
   margin-bottom: 0px;
-  margin-left: 15px;
+  margin-left: 40px;
 }
 
 .list-description {
   margin-top: 5px;
   font-size: 16px;
   opacity: 50%;
-  margin-left: 15px;
+  margin-left: 40px;
   width: 400px;
   height: 20px;
   overflow: hidden;
@@ -289,15 +293,25 @@ body {
   opacity: 50%;
   float: right;
 }
+.check-box {
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
 .delete-icon {
   position: absolute;
   top: 22px;
   right: 60px;
-  color: #01b6fd;
+  color: #0184ff;
   max-width: 40px;
-  visibility: hidden;
   z-index: 99;
-  font-size: 20px;
+  font-size: 30px;
 }
 .edit-icon {
   position: absolute;
@@ -306,7 +320,7 @@ body {
   color: #01b6fd;
   font-size: 20px;
   max-width: 60px;
-  visibility: hidden;
+  display: none;
   z-index: 99;
 }
 .btn-add {
@@ -314,8 +328,8 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 27px;
-  bottom: 27px;
+  right: -20%;
+  top: 50%;
   background-image: radial-gradient(circle, #01b6fd, rgb(19, 200, 212));
   color: #fff;
   border: none;
@@ -474,6 +488,9 @@ input[type="time"]::-webkit-inner-spin-button {
   .up-box {
     border-radius: 0;
   }
+  .up-holder {
+    height: 32%;
+  }
   .blue-hill {
     border-radius: 0;
     height: 200px;
@@ -501,21 +518,22 @@ input[type="time"]::-webkit-inner-spin-button {
   }
   .list-head {
     font-size: 13px;
+    margin-bottom: 1rem;
   }
   .full-date {
     font-size: 12px;
     bottom: 5%;
   }
   .btn-add {
+    position: absolute;
     width: 60px;
     height: 60px;
-    right: 20%;
-    bottom: 2%;
+    right: 12%;
+    transform: translate(0%, 400%);
     box-shadow: 0.2rem 0.2rem 1rem rgb(6 201 250/0.7);
   }
   .popup {
     width: 40vh;
-    right: 15%;
   }
   .form-control {
     margin-top: 10%;
@@ -523,6 +541,9 @@ input[type="time"]::-webkit-inner-spin-button {
   }
   .textarea-control {
     font-size: 14px;
+  }
+  .footers {
+    bottom: 8%;
   }
   .footers h2 {
     font-size: 13px;
@@ -541,14 +562,19 @@ input[type="time"]::-webkit-inner-spin-button {
   }
   .list-description {
     margin-bottom: 15px;
-    margin-left: 0px;
     font-size: 13px;
   }
   .list-title {
     font-size: 15px;
-    margin: 0;
   }
   .list-time {
     font-size: 13px;
+  }
+  .check-box {
+    top: -50%;
+  }
+  .delete-icon {
+    top: 10%;
+    font-size: 24px;
   }
 }

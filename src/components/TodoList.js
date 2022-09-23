@@ -19,7 +19,7 @@ function TodoList({
   function onDelete() {
     handleDelete(id);
   }
-
+  console.log(id);
   function clickHandle() {
     const newList = Array.from(list);
     const index = list.findIndex((item) => item.Id === data.Id);
@@ -42,13 +42,15 @@ function TodoList({
 
   return (
     <div className="lister">
-      <FaCheck
-        className="check"
-        style={{ visibility: data.completed ? "visible" : "hidden" }}
-      />
-
+      <div className="check-box" onClick={clickHandle}>
+        <FaCheck
+          className="check"
+          style={{ visibility: data.completed ? "visible" : "hidden" }}
+        />
+      </div>
+      {/* <input type="checkbox" className="check-box" /> */}
       <div style={{ opacity: data.completed ? "50%" : "100%" }}>
-        <div className="spanner" onClick={clickHandle}></div>
+        <div className="spanner" onClick={onhandleEdit}></div>
         <p
           onClick={handleClick}
           className="list-time"
@@ -65,11 +67,7 @@ function TodoList({
         <p className="list-description">{data.description}</p>
       </div>
 
-      <MdDelete
-        onClick={onDelete}
-        className="delete-icon"
-        style={{ visibility: data.completed ? "hidden" : "" }}
-      />
+      <MdDelete onClick={onDelete} className="delete-icon" />
       <FiEdit2
         onClick={onhandleEdit}
         className="edit-icon"

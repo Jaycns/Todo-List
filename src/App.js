@@ -85,45 +85,46 @@ export default function App() {
     "November",
     "December",
   ];
+  const todoId = todo.Id;
   return (
-    console.log(list),
+    console.log(todoId),
     (
       <div className="todo">
-        <div className="up-box">
-          <img src={image} className="blue-hill" alt="An age is here" />
-          <div className="lcon">
-            <div className="line"></div>
-            <div className="lin"></div>
-            <div className="line"></div>
-          </div>
-          <h1 className="heads">
-            Your <br /> Todo List
-          </h1>
-          <p className="full-date">
-            {Months[month - 1]} {day}, {year}
-          </p>
-          <div className="line-under"></div>
-          <div className="dark-trans"></div>
-          <div className="trans-one">
-            <h1>24</h1>
-            <p>Personal</p>
-          </div>
-          <div className="trans-two">
-            <h1>15</h1>
-            <p>Business</p>
-          </div>
-          <div className="trans-three">
-            <CircularProgress
-              className="circle-progress"
-              value={perc}
-              size="22px"
-              thickness="8px"
-            />
-            <p>{lenth > 0 ? perc : 0}% done</p>
+        <div className="up-holder">
+          <div className="up-box">
+            <img src={image} className="blue-hill" alt="An age is here" />
+            <div className="lcon">
+              <div className="line"></div>
+              <div className="lin"></div>
+              <div className="line"></div>
+            </div>
+            <h1 className="heads">
+              Your <br /> Todo List
+            </h1>
+            <p className="full-date">
+              {Months[month - 1]} {day}, {year}
+            </p>
+            <div className="line-under"></div>
+            <div className="dark-trans"></div>
+            <div className="trans-one">
+              <h1>24</h1>
+              <p>Personal</p>
+            </div>
+            <div className="trans-two">
+              <h1>15</h1>
+              <p>Business</p>
+            </div>
+            <div className="trans-three">
+              <CircularProgress
+                className="circle-progress"
+                value={perc}
+                size="22px"
+                thickness="8px"
+              />
+              <p>{lenth > 0 ? perc : 0}% done</p>
+            </div>
           </div>
         </div>
-
-        <h2 className="list-head">Inbox</h2>
         <Modal
           open={open}
           onClose={handleClose}
@@ -133,6 +134,8 @@ export default function App() {
           <TodoForm
             handleClick={handleClick}
             handleChange={handleChange}
+            handleDelete={handleDelete}
+            handleClose={handleClose}
             todo={todo}
             list={list}
             setList={setList}
@@ -141,6 +144,7 @@ export default function App() {
           />
         </Modal>
         <div className="flow-holder">
+          <h2 className="list-head">Inbox</h2>
           <div className="list">
             {list.map((item, index) => {
               return (
