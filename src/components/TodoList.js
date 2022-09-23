@@ -50,7 +50,10 @@ function TodoList({
       </div>
       {/* <input type="checkbox" className="check-box" /> */}
       <div style={{ opacity: data.completed ? "50%" : "100%" }}>
-        <div className="spanner" onClick={onhandleEdit}></div>
+        <div
+          className="spanner"
+          onClick={!data.completed && onhandleEdit}
+        ></div>
         <p
           onClick={handleClick}
           className="list-time"
