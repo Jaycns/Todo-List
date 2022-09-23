@@ -144,9 +144,7 @@ export default function App() {
           />
         </Modal>
         <div className="flow-holder">
-          <div className="list-head">
-            <h2>Inbox</h2>
-          </div>
+          <h2 className="list-head">Inbox</h2>
           <div className="list">
             {list.map((item, index) => {
               return (

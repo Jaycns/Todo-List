@@ -240,16 +240,11 @@ body {
   background: #fff;
   z-index: 1000;
   margin: 0px 20px;
-}
-.list-head h2 {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  position: absolute;
-  top: -30%;
-  opacity: 0.5;
-  margin-bottom: 1rem;
 }
+
 .list {
   display: flex;
   flex-direction: column;
