@@ -296,7 +296,7 @@ body {
 .check-box {
   font-size: 24px;
   position: absolute;
-  top: 0;
+  top: -18%;
   bottom: 0;
   z-index: 99;
   margin: auto;
@@ -576,5 +576,30 @@ input[type="time"]::-webkit-inner-spin-button {
   .delete-icon {
     top: 10%;
     font-size: 24px;
+  }
+}
+@media (max-width: 1000px) {
+  .up-holder{
+    height: 18vh;
+  }
+}
+@media (max-width: 768px) {
+  .up-holder{
+    height: 22vh;
+  }
+}
+@media (max-width: 500px) {
+  .up-holder{
+    height: 25vh;
+  }
+}
+@media (max-width: 375px) {
+  .up-holder{
+    height: 32vh;
+  }
+}
+@media (max-width: 360px) {
+  .up-holder{
+    height: 30vh;
   }
 }
