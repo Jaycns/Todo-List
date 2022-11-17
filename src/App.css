@@ -234,7 +234,7 @@ body {
 .list-head {
   opacity: 100%;
   text-transform: uppercase;
-  position: fixed;
+  position: absolute;
   width: 35rem;
   height: 2rem;
   background: #fff;
@@ -246,7 +246,6 @@ body {
 }
 @media (max-width: 1200px) {
   .list-head {
-    position: absolute;
     width: 10rem;
   }
 }
